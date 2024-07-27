@@ -17,3 +17,13 @@ variable "instance_name" {
   description = "The name of the EC2 instance"
   default     = "entregable6"
 }
+
+variable "key_name" {
+  description = "The name of the EC2 key pair"
+  default     = "ubuntupg01"
+}
+
+variable "vpc_id" {
+  description = "The ID of the VPC to deploy into"
+  default     = "vpc-0899b361"
+}

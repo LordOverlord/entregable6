@@ -1,10 +1,10 @@
-# .github/workflows/terraform-deploy.yml
 name: Deploy to AWS with Terraform
 
 on:
-  push:
-    branches:
-      - main  # Trigger the workflow on push to the main branch
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main  # Trigger the workflow on push to the main branch
 
 jobs:
   terraform:
@@ -31,3 +31,23 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
+
+    - name: Upload Code to EC2
+      uses: appleboy/scp-action@v0.1.6
+      with:
+        host: ${{ steps.terraform.outputs.instance_public_ip }}
+        username: ubuntu
+        key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+        port: 22
+        source: "root/entregable6/html code/"
+        target: "/home/ubuntu/code/"
+
+    - name: Deploy Code on EC2
+      run: |
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@${{ steps.terraform.outputs.instance_public_ip }} << 'EOF'
+          sudo cp -r /home/ubuntu/code/* /var/www/html/
+          sudo chown -R www-data:www-data /var/www/html/
+          sudo systemctl restart apache2
+        EOF
+      env:
+        EC2_SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
