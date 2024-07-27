@@ -1,0 +1,712 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('background.jpg'); /* Add your background image URL here */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background image fixed during scroll */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust the color and transparency level */
+    z-index: -1;
+}
+
+.header, .container, .footer {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    flex: 1;
+}
+
+.header {
+    background-color: #2C3E75;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+}
+
+img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.welcome {
+    padding: 40px 0;
+}
+
+.services,
+.schedule,
+.contact {
+    padding: 20px 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2C3E75;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #1D2951;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+    width: calc(100% - 16px);
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.footer {
+    background-color: #2C3E75; /* Updated background color */
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    bottom: 0; /* Ensure it stays at the bottom */
+}
+
+.footer .container {
+    padding: 5px 5px; /* Reduce padding */
+    max-width: 800px; /* Optionally limit the width */
+    margin: 0 auto;
+}
+.footer p {
+    margin: 0;
+    font-size: 12px; /* Make the text smaller */
+    color: rgba(68, 65, 65, 0.8); /* Make the text color a bit lighter for a more subtle look */
+}
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set width to 300px */
+    margin: 20px auto;
+    text-align: center;
+}
+
+.login-button {
+    background-color: #1D2951;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold; /* Match the font-weight with the links */
+}
+
+.login-button:hover {
+    background-color: #141E3C;
+}
+
+.closed {
+    background-color: #ffdddd; /* Soft red background */
+    color: #d9534f; /* Red text color */
+}
+
+td[colspan="2"] {
+    text-align: center; /* Center horizontally */
+    vertical-align: middle; /* Center vertically */
+}
+
+.services .container {
+    text-align: center; /* Center align the text */
+}
+
+.services ul {
+    display: inline-block; /* Inline-block to center the list */
+    text-align: left; /* Ensure the bullets are aligned to the left */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove default list style */
+}
+
+.services ul li {
+    position: relative; /* Position relative to add custom bullets */
+    padding-left: 20px; /* Add space for custom bullets */
+    margin-bottom: 10px; /* Add some space between items */
+}
+
+.services ul li::before {
+    content: '•'; /* Custom bullet */
+    position: absolute;
+    left: 0; /* Position bullet to the left */
+    color: #2C3E75; /* Custom color for bullets */
+    font-size: 1.2em; /* Adjust size of the bullet */
+}
+
+.user-section .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.user-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.user-section table, th, td {
+    border: 1px solid #ccc;
+}
+
+.user-section th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.user-section th {
+    background-color: #2C3E75;
+    color: white;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-group select,
+.input-group input {
+    width: 100%; /* Ensure the input and select elements take full width */
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center; /* Center the text */
+    appearance: none; /* Remove default styling for better control */
+    -webkit-appearance: none; /* Remove default styling for better control in Safari */
+    -moz-appearance: none; /* Remove default styling for better control in Firefox */
+    background-position: right 10px center; /* Position the dropdown arrow */
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="none" stroke="gray" stroke-width="1" d="M1 3l4 4 4-4"/></svg>'); /* Custom dropdown arrow */
+}
+
+.input-group select option {
+    text-align: center; /* Center text inside options */
+}
+
+.input-group textarea {
+    width: calc(100% - 16px);
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2C3E75;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Add margin-bottom to provide space below the button */
+}
+
+button:hover {
+    background-color: #1A254A;
+}
+
+#reserveForm {
+    max-width: 400px; /* Set a max width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.plans-section .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.plans-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plans-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.plans-section table, th, td {
+    border: 1px solid #ccc;
+}
+
+.plans-section th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.plans-section th {
+    background-color: #2C3E75;
+    color: white;
+}
+
+.user-info .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px; /* Adjusted max-width for a more centered look */
+    text-align: center; /* Center text */
+}
+
+.user-info .user-picture-placeholder {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-bottom: 20px; /* Space below the picture */
+}
+
+.user-info .user-picture-placeholder img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #2C3E75;
+}
+
+/* Existing styles... */
+.user-section .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px; /* Adjust max-width for a more contained look */
+    text-align: center; /* Center text */
+}
+
+.user-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.user-section table, th, td {
+    border: 1px solid #ccc;
+}
+
+.user-section th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.user-section th {
+    background-color: #2C3E75;
+    color: white;
+}
+
+.admin-info .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px; /* Adjust max-width for a more centered look */
+    text-align: center;
+}
+
+.admin-info h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #2C3E75;
+}
+
+.admin-info p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Admin section container */
+.admin-section .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px; /* Adjust max-width for a more centered look */
+    text-align: center;
+}
+
+.admin-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.admin-section table, th, td {
+    border: 1px solid #ccc;
+}
+
+.admin-section th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.admin-section th {
+    background-color: #2C3E75;
+    color: white;
+}
+
+.action-button {
+    padding: 5px 10px;
+    background-color: #2C3E75;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #1A254A;
+}
+.trainer-info .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px; /* Adjusted max-width for a more centered look */
+    text-align: center; /* Center text */
+}
+
+.trainer-info .trainer-picture-placeholder {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-bottom: 20px; /* Space below the picture */
+}
+
+.trainer-info .trainer-picture-placeholder img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trainer-info h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #2C3E75;
+}
+
+/* Trainer section container */
+.trainer-section .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px; /* Adjust max-width for a more contained look */
+    text-align: center; /* Center text */
+}
+
+.trainer-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.trainer-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.trainer-section table, th, td {
+    border: 1px solid #ccc;
+}
+
+.trainer-section th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.trainer-section th {
+    background-color: #2C3E75;
+    color: white;
+}
+
+/* Error section */
+.error-section .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 100px auto;
+    width: 80%;
+    max-width: 600px; /* Adjust max-width for a more centered look */
+    text-align: center; /* Center text */
+    background-image: url('404.png'); /* Add your background image URL here */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    position: relative; /* Ensure the z-index works correctly */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.error-section .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* Add a white overlay with transparency */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.error-section .container > * {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.error-section h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    color: #2C3E75;
+}
+
+.error-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.error-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.error-section .nav-button {
+    background-color: #2C3E75;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Smaller padding */
+    border-radius: 4px;
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px; /* Space above the button */
+    width: 50%; /* Half the width of the container */
+    max-width: 200px; /* Ensure it doesn't get too large on larger screens */
+    display: inline-block; /* Center the button */
+}
+
+.error-section .nav-button:hover {
+    background-color: #1A254A;
+}
+
+/* Sudo info section */
+.sudo-info .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 100px auto;
+    width: 80%;
+    max-width: 600px; /* Adjusted max-width for a more centered look */
+    text-align: center; /* Center text */
+}
+
+.sudo-info .sudo-picture-placeholder {
+    flex: 0 0 150px;
+    height: 150px;
+    margin-bottom: 20px; /* Space below the picture */
+}
+
+.sudo-info .sudo-picture-placeholder img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sudo-info h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #2C3E75;
+}
+
+.giant-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 20px 0; /* Adjust padding */
+    border-radius: 8px;
+    font-size: 24px; /* Adjust font size */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px; /* Space above the button */
+    width: 50%; /* Half the width of the container */
+    max-width: 300px; /* Ensure it doesn't get too large on larger screens */
+    line-height: 1.2; /* Line height for the text */
+    text-align: center; /* Center text */
+}
+
+
+
+.giant-button:hover {
+    background-color: #c9302c;
+}

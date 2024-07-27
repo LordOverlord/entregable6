@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario - Olympus Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="logo.jpg" alt="Logo Olympus Club" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><button class="nav-button" onclick="location.href='home.html'">Inicio</button></li>
+                    <li><button class="nav-button" onclick="location.href='servicios.html'">Servicios</button></li>
+                    <li><button class="nav-button" onclick="location.href='planes.html'">Planes</button></li>
+                    <li><button class="nav-button" onclick="location.href='login.html'">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="user-info">
+            <div class="container">
+                <div class="user-picture-placeholder">
+                    <img src="user.webp" alt="User Picture">
+                </div>
+                <h2>Bienvenido, Usuario</h2>
+            </div>
+        </section>
+        <section class="user-section">
+            <div class="container">
+                <h2>Plan Actual</h2>
+                <table>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Inicio</th>
+                        <th>Fin</th>
+                        <th>Estado</th>
+                    </tr>
+                    <tr>
+                        <td>Mensual</td>
+                        <td>01/07/2024</td>
+                        <td>31/07/2024</td>
+                        <td>Activo</td>
+                    </tr>
+                </table>
+                <h2>Servicios Reservados</h2>
+                <table>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Estado</th>
+                    </tr>
+                    <tr>
+                        <td>Yoga</td>
+                        <td>10/07/2024</td>
+                        <td>10:00 AM</td>
+                        <td>Confirmado</td>
+                    </tr>
+                    <tr>
+                        <td>Pilates</td>
+                        <td>12/07/2024</td>
+                        <td>11:00 AM</td>
+                        <td>Confirmado</td>
+                    </tr>
+                </table>
+                <h2>Reservar Servicio</h2>
+                <form id="reserveForm">
+                    <div class="input-group">
+                        <label for="service">Servicio</label>
+                        <select id="service" name="service" required>
+                            <option value="Yoga">Yoga</option>
+                            <option value="Pilates">Pilates</option>
+                            <option value="Entrenamiento Personal">Entrenamiento Personal</option>
+                            <option value="Piscina">Piscina</option>
+                            <option value="Tenis">Tenis</option>
+                            <option value="Spa">Spa</option>
+                            <option value="Sauna">Sauna</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="date">Fecha</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="time">Hora</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <button type="submit">Reservar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Centro Deportivo Olympus Club. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

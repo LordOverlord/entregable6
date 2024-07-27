@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Olympus Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="logo.jpg" alt="Logo Olympus Club" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><button class="nav-button" onclick="location.href='home.html'">Inicio</button></li>
+                    <li><button class="nav-button" onclick="location.href='servicios.html'">Servicios</button></li>
+                    <li><button class="nav-button" onclick="location.href='planes.html'">Planes</button></li>
+                    <li><button class="nav-button" onclick="location.href='login.html'">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="admin-info">
+            <div class="container">
+                <h2>Panel de Administración</h2>
+                <p>Bienvenido, Admin. Aquí puedes gestionar el contenido del sitio y las cuentas de usuarios.</p>
+            </div>
+        </section>
+        
+        <section class="admin-section">
+            <div class="container">
+                <h2>Gestionar Usuarios</h2>
+                <table>
+                    <tr>
+                        <th>ID de Usuario</th>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <!-- Example row -->
+                    <tr>
+                        <td>1</td>
+                        <td>Carlos Pérez</td>
+                        <td>carlos.perez@example.com</td>
+                        <td>
+                            <button class="action-button">Editar</button>
+                            <button class="action-button">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+        </section>
+        
+        <section class="admin-section">
+            <div class="container">
+                <h2>Gestionar Servicios</h2>
+                <table>
+                    <tr>
+                        <th>ID del Servicio</th>
+                        <th>Nombre del Servicio</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <!-- Example row -->
+                    <tr>
+                        <td>1</td>
+                        <td>Yoga</td>
+                        <td>Clases de yoga para todos los niveles</td>
+                        <td>
+                            <button class="action-button">Editar</button>
+                            <button class="action-button">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Centro Deportivo Olympus Club. Todos los derechos reservados.</p>
+        </div

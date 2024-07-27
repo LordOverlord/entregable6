@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Deportivo Olympus Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="logo.jpg" alt="Logo Olympus Club" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><button class="nav-button" onclick="location.href='home.html'">Inicio</button></li>
+                    <li><button class="nav-button" onclick="location.href='servicios.html'">Servicios</button></li>
+                    <li><button class="nav-button" onclick="location.href='planes.html'">Planes</button></li>
+                    <li><button class="nav-button" onclick="location.href='login.html'">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="welcome" class="welcome">
+            <div class="container">
+                <h1>Bienvenidos al Centro Deportivo Olympus Club</h1>
+                <p>Tu salud y bienestar son nuestra prioridad. Únete a nosotros para alcanzar tus objetivos de fitness y disfrutar de nuestras instalaciones de primera clase.</p>
+            </div>
+        </section>
+        <section id="schedule" class="schedule">
+            <div class="container">
+                <h2>Horario</h2>
+                <table>
+                    <tr>
+                        <th>Día</th>
+                        <th>Hora de Apertura</th>
+                        <th>Hora de Cierre</th>
+                    </tr>
+                    <tr>
+                        <td>Lunes a Viernes</td>
+                        <td>6:00 AM</td>
+                        <td>10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>8:00 AM</td>
+                        <td>8:00 PM</td>
+                    </tr>
+                    <tr class="closed">
+                        <td>Domingo</td>
+                        <td colspan="2">Cerrado</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Centro Deportivo Olympus Club. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
